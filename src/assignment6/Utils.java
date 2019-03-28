@@ -16,7 +16,7 @@ public class Utils {
     if (y == 0 || y % 2 == 0) {
       result = expt(((x * x) % m), y/2);
     } else {
-      result = x * (expt(x, y-1) % m) ;
+      result = x * (expt(x, y-1) % m);
     } // else
     return result;
   } // fastModExpt(int x, int y, int m)
@@ -80,4 +80,6 @@ public class Utils {
  *  - Is contains correct? The problem formatting is scrambled so I'm not sure I got the formula correct.
  *  - Is it okay that I have all of my methods for all questions in one class called Utils?
  *  - Are all the classes supposed to be static?
+ *  - What format should the time complexity analysis be in? Should we include counters in our original
+ *    classes or make new duplicate classes for them?
  */
