@@ -44,8 +44,12 @@ public class Utils {
   
   public static String concatAndReplicateAll(String[] arr, int n) {
     String result = new String("");
+    for (int i = 0; i < arr.length; i++) {
+      for (int k = 0; k < n; k++) {
+        result = result.concat(arr[i]);
+      } // for
+    } // for
     return result;
-    // STUB;
   } // concatAndReplicateAll(String[] arr, int n)
   
   public static int[] interleave(int[] arr1, int[] arr2) {
