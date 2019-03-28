@@ -11,4 +11,4 @@ List of files:
 Ally Rogers
 
 ## Sources
-None yet.
+* For concat string method: https://docs.oracle.com/javase/7/docs/api/java/lang/String.html
