@@ -17,6 +17,13 @@ public class UtilExpt {
     printIntArr(interleveRes1, pen);
     pen.println();
     printIntArr(Utils.interleave(interleve1b, interleve1a), pen);
+    pen.println();
+    
+    String[] testConcat = new String[] {"hello", " ", "", "testing", "-", "concat", " TT"};
+    pen.println("concatAndReplicateAll w/ n = 0: " + Utils.concatAndReplicateAll(testConcat, 0));
+    pen.println("concatAndReplicateAll w/ n = 1: " + Utils.concatAndReplicateAll(testConcat, 1));
+    pen.println("concatAndReplicateAll w/ n = 2: " + Utils.concatAndReplicateAll(testConcat, 2));
+    pen.println("concatAndReplicateAll w/ n = 3: " + Utils.concatAndReplicateAll(testConcat, 3));
     
   } // main
   
