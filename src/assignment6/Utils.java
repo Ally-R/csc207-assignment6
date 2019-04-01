@@ -1,6 +1,8 @@
 package assignment6;
 
 public class Utils {
+  
+  // THIS IS WRONG -- LOOK AT NEW FORMULA
   public static boolean contains(double[] arr, double eps, double d1) {
     boolean contains = false;
     for (int i = 0; i < arr.length && !contains; i++) {
@@ -11,6 +13,7 @@ public class Utils {
     return contains;
   } // contains(double[] arr, double eps, double d1)
   
+  // THIS IS WRONG -- LOOK AGAIN AT FORMULA (IT'S CHANGED)
   public static int fastModExpt(int x, int y, int m) {
     int result;
     if (y == 0 || y % 2 == 0) {
@@ -81,9 +84,9 @@ public class Utils {
  *  - IntPair I was supposed to make or to import from somewhere?
  *  - Do I need to avoid repeat pairs?
  *  - Is 0 a valid argument for fastModExpt?
- *  - Is contains correct? The problem formatting is scrambled so I'm not sure I got the formula correct.
- *  - Is it okay that I have all of my methods for all questions in one class called Utils?
- *  - Are all the classes supposed to be static?
- *  - What format should the time complexity analysis be in? Should we include counters in our original
+ *  - NO, LOOK AGAIN - Is contains correct? The problem formatting is scrambled so I'm not sure I got the formula correct.
+ *  - YES - Is it okay that I have all of my methods for all questions in one class called Utils?
+ *  - YES - Are all the classes supposed to be static?
+ *  - [You're Right] - What format should the time complexity analysis be in? Should we include counters in our original
  *    classes or make new duplicate classes for them?
  */
