@@ -28,7 +28,8 @@ public class Utils {
   /**
    * Calculate x^y mod m
    * 
-   * @pre None.
+   * @pre m != 0
+   * @pre y >= 0
    * @post Returns the result of x^y mod m
    */
   public static int fastModExpt(int x, int y, int m) {
@@ -51,8 +52,8 @@ public class Utils {
    * Finds all possible pairs of the elements of arr
    * 
    * @pre arr is full and arr.length > 0
-   * @post pairArr is an array of all possible pairs (including duplicate and reversed pairs)
-   *       that can be created using the elements of arr.
+   * @pre arr contains no duplicate values
+   * @post pairArr is an array of all possible pairs that can be created from the elements of arr.
    * @post pairArr.length = arr.length^2
    */
   public static IntPair[] allPair(int[] arr) {
@@ -66,9 +67,10 @@ public class Utils {
   } // allPair(int[] arr)
   
   /**
-   * g
+   * Replicate each string in arr n times and combine result into one string
    * 
-   * @pre
+   * @pre n >= 0
+   * @pre arr is full and arr.length > 0
    * @post
    */
   public static String concatAndReplicateAll(String[] arr, int n) {
@@ -82,36 +84,35 @@ public class Utils {
   } // concatAndReplicateAll(String[] arr, int n)
   
   /**
-   * g
+   * Intertwine values of arr1 and arr2
    * 
-   * @pre
-   * @post
+   * @pre arr1 is full and arr1.length > 0
+   * @pre arr2 is full and arr2.length > 0
+   * @post result.length = arr1.length + arr2.length
+   * @post result contains exactly one copy of each element in arr1 and arr2
+   * @post Elements of result are in the same order as elements in arr1 and arr2
+   * @post Each subsequent value of result is the next unadded value in the input
+   *       arrays, alternating between arr1 and arr2
    */
   public static int[] interleave(int[] arr1, int[] arr2) {
     int[] result = new int[arr1.length + arr2.length];
-    int counter = 0;
     if (arr1.length > arr2.length) {
       for (int i = 0; i < arr2.length; i++) {
         result[i*2] = arr1[i];
         result[i*2 + 1] = arr2[i];
-        counter ++;
       } // for
       for (int i = arr2.length; i < arr1.length; i++) {
         result[arr2.length + i] = arr1[i];
-        counter++;
       } // for
     } else {
       for (int i = 0; i < arr1.length; i++) {
         result[i*2] = arr1[i];
         result[i*2 + 1] = arr2[i];
-        counter ++;
       } // for
       for (int i = arr1.length; i < arr2.length; i++) {
         result[arr1.length + i] = arr2[i];
-        counter++;
       } // for
     } // else
-    System.out.println("counter: " + counter + " for arr1.len: " + arr1.length + ", arr2.len: " + arr2.length);
     return result;
   } // interleave(int[] arr1, int[] arr2)
   

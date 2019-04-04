@@ -21,33 +21,46 @@ This means that contains is O(n), given c = 12 and x0 = 1.
 Problem 2: Fast exponentiation
 ------------------------------
 The main influential input for the time complexity of this function is y, since this determines how
-many times the method recurses. The method fastModExpt recurses
+many times the method recurses. It recurses 1.4427 * ln(y) + 1 times. Counting all operations,
+T = 8 + 1.4427 * 7ln(y). This means fastModExpt is O(log(y)), where c = 17 and x0 = 1.
 
 
 Problem 3: All pairs
 --------------------
 The input most influential to the time complexity of this function is clearly the int array arr,
 since this is the only input and since its size determines the number of loops performed. Counting
-each operation within the inner for loop, time complexity: T = 4 + 18n^2, where n = arr.length.
+all operations, this gives time complexity: T = 4 + 18n^2, where n = arr.length.
 
 This means that allPairs is O(n^2), given that c = 22 and x0 = 1.
 
 
 Problem 4: Concat-replicate
 ---------------------------
-Count concats (as 1, then as whatever prob says it is)
+Both n and arr have a significant impact on the time complexity of this method, since each
+determines the number of iterations through a loop. The time complexity is: T = 4 + 3m * 5n, where
+m = arr.length and n = n. This means that the method is O(n*m), given that c = 12 and x0 = 1.
+
+However, this analysis changes with more information about the cost of the concat method. With this
+information, T = 4 + (((3m * 4n + 1)^2 / 2) * s, where s is the longest string in arr. This means
+that the method is instead O(((mn+1)^2)/2 * s), which is O(s * (mn)^2).
 
 
 Problem 5: Interleave
 ---------------------
-Time complexity: Count array accesses
+Time complexity: Both inputs significantly impact the time complexity. Based on the number of array
+accesses, interleave is O(m+n), where m = arr1.length and n = arr2.length. This is because the
+method intertwines arrays length m and n into an array length m+n, so it will take time proportional
+to m+n, which is the number of times the method must fill a space.
 
-Space complexity: g
+Space complexity: The space complexity is also O(m+n), where m = arr1.length and n = arr2.length
+because all of the space required in the method is for storing the result array (not counting the
+input arrays), and the result array takes m+n space.
 
 
 Space v.s. Time Complexity
 --------------------------
-The space complexity will always be bounded by the time complexity, since it takes time to allocate
-each spot in memory, but it also takes time to access previously allocated space. Therefore, the
-time complexity may be much larger than the space complexity, and will never be less than the space
-complexity.
+The space complexity will always be bounded by the time complexity because it takes time to access
+each spot in memory and it also takes time to access previously accessed space. It can be assumed
+that all spaces allocated will be accessed at least once. Therefore, the time complexity may be much
+larger than the space complexity, since a given space can be accessed multiple times, and it will
+never be less than the space complexity, since all spaces will be accessed at least once.
