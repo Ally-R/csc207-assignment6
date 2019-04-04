@@ -1,10 +1,10 @@
 package assignment6;
 
 public class Utils {
-  public static boolean contains(double[] arr, double eps, double d1) {
+  public static boolean contains(double[] arr, double eps, double d) {
     boolean contains = false;
     for (int i = 0; i < arr.length && !contains; i++) {
-      if (d1 - arr[i] < eps) {
+      if ((arr[i] - d) < eps) {
         contains = true;
       } // if
     } // while
