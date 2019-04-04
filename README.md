@@ -14,4 +14,4 @@ Ally Rogers
 ## Sources
 * For concat string method: https://docs.oracle.com/javase/7/docs/api/java/lang/String.html
 * Talked briefly with Charun about our general ideas around determining the complexity of a given method, and translating this to Big-O notation.
-* Several short discussions with Sam Rebelsky about Big-O
+* Several short discussions with Sam Rebelsky about Big-O and fastModExpt recursion
