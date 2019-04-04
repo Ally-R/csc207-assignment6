@@ -1,0 +1,53 @@
++-------------------------+
+| Ally Rogers             |
+| CSC 207.02 Assignment 6 |
+| Complexity Analysis     |
++-------------------------+
+
+Problem 1: Contains
+-------------------
+The worst-case scenario for this problem is when there is no element in the array that fulfills the
+criteria abs(element - d) < eps, because in this case, each element in the array must be checked.
+In contrast, if the criteria is met by some element in the middle of the list, then only the
+elements up to and including that element would need to be checked, which would be a better scenario
+in terms of complexity.
+
+Therefore, the input most important to analyzing time complexity is the array arr. Counting all
+operations, this gives time complexity: T = 3 + 9n, where n = arr.length.
+
+This means that contains is O(n), given c = 12 and x0 = 1.
+
+
+Problem 2: Fast exponentiation
+------------------------------
+The main influential input for the time complexity of this function is y, since this determines how
+many times the method recurses. The method fastModExpt recurses
+
+
+Problem 3: All pairs
+--------------------
+The input most influential to the time complexity of this function is clearly the int array arr,
+since this is the only input and since its size determines the number of loops performed. Counting
+each operation within the inner for loop, time complexity: T = 4 + 18n^2, where n = arr.length.
+
+This means that allPairs is O(n^2), given that c = 22 and x0 = 1.
+
+
+Problem 4: Concat-replicate
+---------------------------
+Count concats (as 1, then as whatever prob says it is)
+
+
+Problem 5: Interleave
+---------------------
+Time complexity: Count array accesses
+
+Space complexity: g
+
+
+Space v.s. Time Complexity
+--------------------------
+The space complexity will always be bounded by the time complexity, since it takes time to allocate
+each spot in memory, but it also takes time to access previously allocated space. Therefore, the
+time complexity may be much larger than the space complexity, and will never be less than the space
+complexity.
