@@ -4,7 +4,7 @@
 Ally Rogers
 
 ## Summary
-Files for all parts of Assignment 6 on Big O, including complexity analysis.
+Files for all parts of Assignment 6 on Big O, including space and time complexity analysis.
 List of files:
 * Utils.java == All methods for the assignment
 * UtilExpt.java == Tests for the methods in Utils.java
