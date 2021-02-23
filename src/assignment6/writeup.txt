@@ -1,5 +1,5 @@
 +-------------------------+
-| Ally Rogers             |
+| Ally                    |
 | CSC 207.02 Assignment 6 |
 | Complexity Analysis     |
 +-------------------------+
