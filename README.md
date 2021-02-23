@@ -1,7 +1,7 @@
 # Big-O: CSC 207.02 Assignment 6
 
 ## Group Partners
-Ally Rogers
+Ally R
 
 ## Summary
 Files for all parts of Assignment 6 on Big O, including space and time complexity analysis.
