@@ -5,7 +5,7 @@ import java.lang.Math;
 /**
  * Utils for various integer, string and array calculations/manipulations
  * 
- * @author Ally Rogers -- rogersal@grinnell.edu
+ * @author Ally
  */
 public class Utils {
   /**
