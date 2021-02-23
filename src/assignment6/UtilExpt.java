@@ -5,7 +5,7 @@ import java.io.PrintWriter;
 /**
  * Some simple informal tests for Utils.java
  * 
- * @author Ally Rogers -- rogersal@grinnell.edu
+ * @author Ally
  */
 public class UtilExpt {
   /**
